@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JQuery example</title>
+    <script
+			  src="https://code.jquery.com/jquery-3.1.0.js"
+			  integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+			  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>Adding HTML</h1>
+    <ul id="theList">
+      <li>Here's 1</li>
+      <li>Here's 2</li>
+    </ul>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#theList").append("<li>Here's 3</li>");
+        $("#theList li").each(function(){
+          var existingText = $(this).text().substr(7,1);
+          $(this).text("Item "+existingText);
+        })
+      });
+    </script>
+  </body>
+</html>

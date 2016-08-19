@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Chapter 2</title>
+  </head>
+  <body>
+    <div id="myDiv">Hello</div>
+    <div class="divClass">Second Line</div>
+    <div class="divClass">
+      <p class="pClass">This is in a paragraph.</p>
+    </div>
+    <div id="output">Last Line</div>
+
+    <script type="text/javascript">
+      var theDiv= document.getElementById('myDiv');
+      theDiv.style.fontFamily = "sans-serif";
+      theDiv.innerHTML = "This is now changed text.";
+      var userAgent = navigator.userAgent;
+      var outputDiv = document.getElementById("output")
+      outputDiv.innerHTML = "You are using "+ userAgent;
+    </script>
+  </body>
+</html>
